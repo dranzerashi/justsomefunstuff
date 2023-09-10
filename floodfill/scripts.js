@@ -49,13 +49,13 @@ var state = function initState() {
       if (x > 0 && state.floodArr[x - 1][y] == fillColor) {
         stack.push([x-1,y])
       }
-      if (x < 299 && state.floodArr[x + 1][y] == fillColor) {
+      if (x < (state.floodArr.length - 1) && state.floodArr[x + 1][y] == fillColor) {
         stack.push([x + 1, y])
       }
       if (y > 0 && state.floodArr[x][y - 1] == fillColor) {
         stack.push([x, y - 1])
       }
-      if (y < 299 && state.floodArr[x][y + 1] == fillColor) {
+      if (y < (state.floodArr.length - 1) && state.floodArr[x][y + 1] == fillColor) {
         stack.push([x, y + 1])
       }
     }
