@@ -23,7 +23,7 @@ function draw() {
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    var colors = ["red", "black", "lime"]
+    var colors = ["#715A30", "#AD8672", "#1164A4"]
     for (let i = 0; i < state.floodArr.length; i++) {
       for (let j = 0; j < state.floodArr.length; j++) {
         let color = colors[state.floodArr[i][j]]
