@@ -37,7 +37,9 @@ function draw() {
 
 function floodFill(x, y) {
   stack = [[x, y]]
-  alert(x+","+y)
+  if($("input[@id=debug]:checked").length>0) {
+    alert(x+","+y)
+  }
   fillColor = state.floodArr[x][y]
   if (fillColor === 2) {
     return;
